@@ -32,7 +32,7 @@ app.get('/api', (req: Request, res: Response) => {
     status_code: 200,
   };
 
-  res.json({ ...data });
+  res.json(data);
 });
 
 const APP_PORT = 8000;
