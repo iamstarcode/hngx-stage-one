@@ -16,19 +16,19 @@ app.get('/api', (req: Request, res: Response) => {
     'Friday',
     'Saturday',
   ];
-  const current_date = dayNames[dayOfWeek];
+  const current_day = dayNames[dayOfWeek];
 
   const currentUTCTime = currentDate.getTime();
 
   const data = {
     slack_name,
-    current_date,
+    current_day,
     utc_time: currentDate.toISOString(),
     track,
     github_file_url:
       'https://github.com/iamstarcode/hngx-stage-one/blob/main/src/app.ts',
 
-    repo: 'https://github.com/iamstarcode/hngx-stage-one',
+    github_repo_url: 'https://github.com/iamstarcode/hngx-stage-one',
     status_code: 200,
   };
 
