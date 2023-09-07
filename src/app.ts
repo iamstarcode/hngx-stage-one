@@ -1,9 +1,6 @@
 import express, { Request, Response } from 'express';
 const app = express();
 
-// database connections
-
-// routes
 app.get('/api', (req: Request, res: Response) => {
   const slack_name = req.query.slack_name;
   const track = req.query.track;
@@ -28,8 +25,10 @@ app.get('/api', (req: Request, res: Response) => {
     current_date,
     utc_time: currentDate.toISOString(),
     track,
-    //file
-    //repo
+    github_file_url:
+      'https://github.com/iamstarcode/hngx-stage-one/blob/main/src/app.ts',
+
+    repo: 'https://github.com/iamstarcode/hngx-stage-one',
     status_code: 200,
   };
 
